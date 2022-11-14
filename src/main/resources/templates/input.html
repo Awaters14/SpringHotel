@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>New Hotel</title>
+
+</script>
+</head>
+<body>
+<form name="inputForm" th:object="${newHotel}" th:action="@{/update/{id}(id=${newHotel.id})}" method=POST>
+
+Name: <input name="name"size="20" th:field="*{name}"> <br />
+Beds: <input name="beds"size="10" th:field="*{beds}"><br />
+Size: <input name="size"size="20" th:field="*{size}"><br />
+Street: <input name="address.street"size="20" th:field="*{address.street}"><br />
+City: <input name="address.city"size="20" th:field="*{address.city}"><br />
+State:<input name="address.state"size="20" th:field="*{address.state}"><br />
+Rating:<input name="address.rating"size="20" th:field="*{address.rating}"><br />
+<input name="submit"type="submit"value="submit"/>
+</form>
+<a href="viewAll">View all Hotels</a>
+</body>
+</html>

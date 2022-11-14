@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>View All Hotels</title>
+</head>
+<body>
+<h1>Hotel</h1>
+<form>
+<table>
+	<tr th:each="currentHotel : ${hotels}">
+	<td th:text="${currentHotel.name}"/>
+	<td th:text="${currentHotel.beds}"/>
+	<td th:text="${currentHotel.size}"/>
+	<td th:text="${currentHotel.address.street}"/>
+	<td th:text="${currentHotel.address.city}"/>
+	<td th:text="${currentHotel.address.state}"/>
+	<td th:text="${currentHotel.address.rating}"/>
+	<td><a th:href="@{/edit/{id}(id=${currentHotel.id})}">Edit</a></td>
+	<td><a th:href="@{/delete/{id}(id=${currentHotel.id})}">Delete</a></td>
+</tr>
+</table>
+</form>
+<a href="../inputHotel">Add a new Hotel</a>
+</body>
+</html>

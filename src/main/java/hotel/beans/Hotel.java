@@ -3,7 +3,7 @@ package hotel.beans;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**  

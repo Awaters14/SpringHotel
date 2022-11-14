@@ -16,12 +16,12 @@ import hotel.controller.BeanConfiguration;
 import hotel.repository.HotelRepository;
 
 @SpringBootApplication
-public class SpringHotel2022Application implements CommandLineRunner{
+public class SpringHotel2022Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringHotel2022Application.class, args);
 	}
-	
+	/*
 	@Autowired
 	HotelRepository repo;
 	
@@ -49,6 +49,8 @@ public class SpringHotel2022Application implements CommandLineRunner{
 	
 		
 	}
-		
-
+	*/
 }
+	
+
+

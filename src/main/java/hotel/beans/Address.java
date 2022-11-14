@@ -1,6 +1,7 @@
 package hotel.beans;
 
 import javax.persistence.Embeddable;
+import lombok.Data;
 
 /**  
 * @author Alex Waters - Awaters6
@@ -8,6 +9,7 @@ import javax.persistence.Embeddable;
 * Oct 16, 2022  
 */
 @Embeddable
+@Data
 public class Address {
 	private String street;
 	private String city;
@@ -33,54 +35,7 @@ public class Address {
 		this.state = state;
 		this.rating = rating;
 	}
-	/**
-	 * @return the street
-	 */
-	public String getStreet() {
-		return street;
-	}
-	/**
-	 * @param street the street to set
-	 */
-	public void setStreet(String street) {
-		this.street = street;
-	}
-	/**
-	 * @return the city
-	 */
-	public String getCity() {
-		return city;
-	}
-	/**
-	 * @param city the city to set
-	 */
-	public void setCity(String city) {
-		this.city = city;
-	}
-	/**
-	 * @return the state
-	 */
-	public String getState() {
-		return state;
-	}
-	/**
-	 * @param state the state to set
-	 */
-	public void setState(String state) {
-		this.state = state;
-	}
-	/**
-	 * @return the rating
-	 */
-	public int getRating() {
-		return rating;
-	}
-	/**
-	 * @param rating the rating to set
-	 */
-	public void setRating(int rating) {
-		this.rating = rating;
-	}
+	
 	@Override
 	public String toString() {
 		return "Address [street=" + street + ", city=" + city + ", state=" + state + ", rating=" + rating + "]";
